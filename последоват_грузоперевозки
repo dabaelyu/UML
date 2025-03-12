@@ -1,0 +1,31 @@
+
+фото: 
+
+@startuml
+actor заказчик as k
+participant "voditel" as v
+participant "manager" as m
+
+k -> m : запрос на заказ 
+activate m
+m -> v : поступление заказа 
+v -> m : принятие заказа
+m -> k : информация о v
+deactivate m
+
+activate v
+v -> v : подготовка к перевозке
+v -> m : готов
+activate m
+m -> k : сообщение о готовности
+deactivate m
+
+v -> v : начало перевозки
+v -> v : доставка груза
+v -> m : уведомление о доставке
+deactivate v
+activate m
+m -> k : груз доставлен
+deactivate m
+
+@enduml

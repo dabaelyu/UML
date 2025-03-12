@@ -1,5 +1,5 @@
 
-фото: 
+фото: https://github.com/dabaelyu/UML/blob/main/IMG_20250312_155343_464.jpg
 
 @startuml
 actor заказчик as k
